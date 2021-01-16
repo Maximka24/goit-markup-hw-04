@@ -21,6 +21,7 @@ html {
 	--bg-dutton: #2196f3;
 	--color-bg-team: #f5f4fa;
 	--color-address: #ffffff;
+	--color-icon: #757575;
 }
 
 body {
@@ -98,10 +99,6 @@ header .container {
 	margin-right: 0px;
 }
 
-/* .header li {
-	padding-top: 32px;
-	padding-bottom: 32px;
-} */
 .header li:last-child {
 	padding-right: 0;
 }
@@ -121,20 +118,30 @@ header .container {
 }
 .margin-contacts li {
 	margin-right: 50px;
+	align-items: center;
 }
 .margin-contacts li:last-child {
 	margin-right: 0px;
 }
 
 .contacts {
-	display: inline-block;
+	/* display: inline-block; */
+	display: flex;
+	align-items: center;
 	font-weight: 500;
 	color: var(--color-text-paragraph);
 	margin: 0;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	fill: var(--color-icon);
 }
 .contacts:hover,
 .contacts:focus {
 	color: var(--color-tartet);
+	fill: var(--color-tartet);
+}
+.icon-header {
+	margin-right: 10px;
 }
 
 /* /ШАПКА САЙТА */
@@ -145,7 +152,18 @@ header .container {
 	padding-top: 200px;
 	padding-bottom: 200px;
 	background: #2f303a;
-	margin-bottom: 94px;
+	background-image: linear-gradient(
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url("../img/Img-teams.jpg");
+	width: 1600px;
+	height: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.hero .container {
+	width: 700px;
 }
 
 .main-header {
@@ -174,13 +192,19 @@ header .container {
 /* / БЛОК ГЕРОЙ */
 /* НАШИ ДОСТОИНСТВА */
 .dignity {
+	padding-top: 94px;
 	padding-bottom: 94px;
 }
 .dignity ul {
 	display: flex;
 	justify-content: space-between;
 }
-
+.dignity-list {
+	display: flex;
+	flex-direction: column;
+	width: 270px;
+	height: 251px;
+}
 .dignity-list:not(:last-child) {
 	margin-right: 30px;
 }
@@ -205,6 +229,13 @@ header .container {
 	letter-spacing: 0.03em;
 	color: var(--color-text-paragraph);
 	margin: 0;
+}
+.icon-dignity {
+	height: 120px;
+	padding: 25px 100px;
+	margin-bottom: 30px;
+	background: #f5f4fa;
+	border-radius: 4px;
 }
 
 /* /НАШИ ДОСТОИНСТВА */
@@ -239,6 +270,7 @@ header .container {
 .team-bg {
 	background: var(--color-bg-team);
 	padding-bottom: 94px;
+	padding-top: 94px;
 }
 
 .person {
@@ -264,13 +296,79 @@ header .container {
 }
 .worker {
 	width: 270px;
-	height: 368px;
+	height: 428px;
 	background: #ffffff;
 	border-radius: 0px 0px 4px 4px;
 	text-align: center;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.icon-team {
+	margin-right: auto;
+	margin-left: auto;
+	width: 206px;
+	height: 44px;
+}
+.icon-team li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	width: 44px;
+}
+.icon-team li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.color-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	fill: var(--color-icon);
+}
+.color-icon:hover,
+.color-icon:focus {
+	fill: #ffffff;
+	border-radius: 50%;
+	background: #2196f3;
 }
 
 /* /НАША КОМАНДА */
+
+/* Постоянные клиенты */
+.clients {
+	padding-bottom: 94px;
+	padding-top: 94px;
+}
+.icon-clients {
+	display: flex;
+}
+.icon-clients li {
+	margin-right: 30px;
+}
+.icon-clients li:last-child {
+	margin-right: 0px;
+}
+.clients-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	height: 90px;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+	fill: var(--color-icon);
+}
+.clients-list:focus,
+.clients-list:hover {
+	fill: #2196f3;
+	border: 1px solid #2196f3;
+}
+
+/* /Постоянные клиенты */
 
 /* ФУТЕР */
 
@@ -282,7 +380,21 @@ header .container {
 .footer-bg .logo {
 	margin-bottom: 20px;
 }
-.container .address {
+.container-footer {
+	display: flex;
+	align-items: baseline;
+}
+.container-footer li {
+	margin-right: 70px;
+}
+.container-footer li:last-child {
+	margin-right: 0px;
+}
+
+.footer-icon ul {
+	display: flex;
+}
+.address {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 1.71;
@@ -292,7 +404,6 @@ header .container {
 	margin-bottom: 9px;
 }
 .contacts-footer {
-	/* display: inline-block; */
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -307,10 +418,39 @@ header .container {
 .margin-mailto {
 	margin-bottom: 9px;
 }
+.connect {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	color: var(--color-text-h2);
+	margin: 0;
+	margin-bottom: 20px;
+}
+.icon-team li {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+}
+.color-icon-ft {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	fill: #ffffff;
+}
+.color-icon-ft:hover,
+.color-icon-ft:focus {
+	fill: #ffffff;
+	border-radius: 50%;
+	background: #2196f3;
+}
 
 /* /ФУТЕР */
 
 /* ПОРТФОЛИО */
+
 .main-portfolio {
 	padding: 94px 0;
 }

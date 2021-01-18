@@ -21,7 +21,8 @@ html {
 	--bg-dutton: #2196f3;
 	--color-bg-team-icon: #f5f4fa;
 	--color-address: #ffffff;
-	--color-icon: #757575;
+	--color-icon: #afb1b8;
+	--color-icon-contacts: #757575;
 }
 
 body {
@@ -133,7 +134,7 @@ header .container {
 	margin: 0;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	fill: var(--color-icon);
+	fill: var(--color-icon-contacts);
 }
 .contacts:hover,
 .contacts:focus {
@@ -214,9 +215,12 @@ header .container {
 	display: none;
 }
 .advantage {
+	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 10px;
-	font-weight: 700;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.03em;
@@ -274,10 +278,19 @@ header .container {
 	padding-bottom: 94px;
 	padding-top: 94px;
 }
+.worker {
+	width: 270px;
+	background: #ffffff;
+	border-radius: 0px 0px 4px 4px;
+	text-align: center;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
 .person {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	padding: 30px 32px;
 }
 
 .our-team {
@@ -295,20 +308,13 @@ header .container {
 	letter-spacing: 0.03em;
 	color: var(--color-text-paragraph);
 	margin: 0;
+	margin-bottom: 16px;
 }
-.worker {
-	width: 270px;
-	height: 428px;
-	background: #ffffff;
-	border-radius: 0px 0px 4px 4px;
-	text-align: center;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-		0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+
 .icon-team {
-	margin-right: auto;
-	margin-left: auto;
 	width: 206px;
+	display: flex;
+	align-items: center;
 }
 .icon-team li {
 	display: flex;
@@ -492,6 +498,9 @@ header .container {
 .button-portfolio:focus {
 	color: var(--text-button-hover);
 	background: var(--color-tartet);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
+	border: 0;
 }
 .container-kards li {
 	width: 370px;

@@ -162,6 +162,7 @@ header .container {
 	height: 600px;
 	margin-right: auto;
 	margin-left: auto;
+	border: 0px;
 }
 .hero .container {
 	width: 700px;
